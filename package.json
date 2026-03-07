@@ -1,0 +1,21 @@
+{
+  "name": "ros2-dashboard",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev -w apps/web",
+    "dev:control": "npm run dev -w apps/control",
+    "build:web": "npm run build -w apps/web",
+    "build:control": "npm run build -w apps/control",
+    "lint:web": "npm run lint -w apps/web",
+    "typecheck": "npm run typecheck -w apps/web && npm run build -w packages/shared && npm run build -w apps/control",
+    "dev:streaming": "npm run dev -w apps/renderstreaming",
+    "build:streaming": "npm run build -w apps/renderstreaming",
+    "start:streaming": "npm run start -w apps/renderstreaming",
+    "build:unity-player": "bash ./scripts/build_unity_renderstreaming.sh",
+    "run:unity-player": "bash ./scripts/launch_unity_renderstreaming.sh"
+  }
+}
