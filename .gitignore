@@ -40,6 +40,12 @@ coverage/
 # TypeScript
 *.tsbuildinfo
 
+# Python
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
 # Misc
 *.pid
 *.seed
